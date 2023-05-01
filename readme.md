@@ -1,8 +1,8 @@
-# Let's find the best GEEK ~最高のGEEKをみつけよう~
+# Let's find the best GEEK -最高のGEEKをみつけよう-
  （じゃんけんアプリ 改造ver.1）
 
 ## プロダクト紹介
--ver.①-1 乱数を使ってオススメGEEKを表示
+ーver.①-1 乱数を使ってオススメGEEKを表示
 -ver.①-2 If分岐×セレクタを使って、条件絞り込みにてオススメGEEKを表示
 
 ## 工夫した点、こだわった点
