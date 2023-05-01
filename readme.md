@@ -3,7 +3,7 @@
 
 ##DEMO（デプロイURL）
 
-https://kyaorin.github.io/janken_makaizo_ver.1/
+https://github.com/kyaorin/janken_makaizo_ver.1
 
 ## プロダクト紹介
 
