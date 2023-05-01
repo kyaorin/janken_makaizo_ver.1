@@ -46,5 +46,6 @@ https://kyaorin.github.io/janken_makaizo_ver.1/
 
 -診断結果はSNSでシェアできるようにしたい
 
-##参考にしたWebサイトなど
+## 参考にしたWebサイトなど
+
 行方不明
