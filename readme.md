@@ -1,7 +1,7 @@
 # Let's find the best GEEK -最高のGEEKをみつけよう-
  （じゃんけんアプリ 改造ver.1）
 
-##デプロイURL
+##DEMO（デプロイURL）
 https://kyaorin.github.io/janken_makaizo_ver.1/
 
 ## プロダクト紹介
@@ -32,3 +32,6 @@ https://kyaorin.github.io/janken_makaizo_ver.1/
 -分岐条件が一致する人を、同時に３人まで提示できるようにしたい
 -マッチング前に、ユーザーのタイプ別診断なんかをつけてもいい
 -診断結果はSNSでシェアできるようにしたい
+
+##参考にしたWebサイトなど
+行方不明
