@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    //ここに勝敗の定義をするといい
+    let win = 0; //勝った場合
+    let lose = 0; //負けた場合
+    let equal = 0; //あいこの場合
+
+    //グーを押したら
+
+    $("#gu_btn").on("click", function () {
+
+      //①コンピューターの出した手が変更（クリア！）
+      //②結果の箇所にも表示がされる（クリア！）
+      //③じゃんけんに勝った数と勝率を表示する機能を追加
+
+      const min = 0;
+      const max = 2;
+      const num = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(num);
+
+      if (num === 0) {
+        equal++; //あいこの時にequalが一つ増える
+        $("#com_hand").text("ぐー");
+        $("#result").text("あいこ" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+
+      } else if (num === 1) {
+        lose++; //負けの時にlooseが一つ増える
+        $("#com_hand").text("ぱー");
+        $("#result").text("あなたの負け" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      } else {
+        win++; //勝ちの時にwinが一つ増える
+        $("#com_hand").text("ちょき");
+        $("#result").text("あなたの勝ち" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      }
+
+    })
+
+    //チョキを押したら
+
+    $("#cho_btn").on("click", function () {
+
+      //コンピューターの出した手が変更
+      //結果の箇所にも表示がされる！
+
+      const min = 0;
+      const max = 2;
+      const num = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(num);
+
+      if (num === 0) {
+        lose++; //負けの時にlooseが一つ増える
+        $("#com_hand").text("ぐー");
+        $("#result").text("あなたの負け" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      } else if (num === 1) {
+        win++; //勝ちの時にwinが一つ増える
+        $("#com_hand").text("ぱー");
+        $("#result").text("あなたの勝ち" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      } else {
+        equal++; //あいこの時にequalが一つ増える
+        $("#com_hand").text("ちょき");
+        $("#result").text("あいこ" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      }
+
+    })
+
+    //パーを押したら
+
+    $("#par_btn").on("click", function () {
+
+      //コンピューターの出した手が変更
+      //結果の箇所にも表示がされる！
+
+      const min = 0;
+      const max = 2;
+      const num = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(num);
+
+      if (num === 0) {
+        win++; //勝ちの時にwinが一つ増える
+        $("#com_hand").text("ぐー");
+        $("#result").text("あなたの勝ち" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      } else if (num === 1) {
+        equal++; //あいこの時にequalが一つ増える
+        $("#com_hand").text("ぱー");
+        $("#result").text("あいこ" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      } else {
+        lose++; //負けの時にlooseが一つ増える
+        $("#com_hand").text("ちょき");
+        $("#result").text("あなたの負け" + " " + win + "勝" + lose + "負" + equal + "分" + " 勝率" + Math.floor(win / (win + lose + equal) * 100) + "%");
+      }
+
+    })
+
+
+
+  </script>
+
+</body>
+
+</html>

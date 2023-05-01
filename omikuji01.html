@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ練習</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    // 0から４が表示される
+    const min = 0;
+    const max = 100;
+    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(num);
+
+    //０→大吉
+    //1→中吉
+    //2→小吉
+    //3→凶
+    //4→大凶
+
+    if (num === 0) {
+      alert("大吉")
+    } else if (1 <= num && num <= 4) {
+      alert("中吉")
+    } else if (5 <= num && num <= 15) {
+      alert("小吉")
+    } else if (16 <= num && num <= 30) {
+      alert("凶")
+    } else {
+      alert("大凶")
+    }
+
+  </script>
+</body>
+
+</html>

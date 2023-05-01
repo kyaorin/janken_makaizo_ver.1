@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" href="css/sample.css">
+    <title>①じゃんけん魔改造</title>
+</head>
+
+<body>
+    <header class="header__wrapper">
+        <img class="logo__img" src="img/g'slogo.jpeg" alt="ロゴ画像">
+        <h1>Let's find the best GEEK</h1>
+        <p class="header__text">最高のGEEKをみつけよう</p>
+        <img class="header__img" src="img/main_header.png" alt="ヘッダー画像">
+
+    </header>
+
+    <main>
+
+        <div class="result__wrapper">
+            <div class="result_text" id="result_text">あなたに<br>オススメのGEEKは？</div>
+            <img class="result_img" id="result_img" src="img/best_geek.png" alt="ベストGEEK写真">
+            <button class="result__btn" id="result__btn">GEEKをみつける</button>
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <small class="copyrights">copyrights 2023 Geek production co.,jp All RIghts Reserved.</small>
+    </footer>
+
+    <!-- 音声の記載 -->
+
+    <audio src="img/geek1.mp3" id="geek1_audio" preload="auto"></audio>
+    <audio src="img/geek3.mp3" id="geek3_audio" preload="auto"></audio>
+    <audio src="img/geek5.mp3" id="geek5_audio" preload="auto"></audio>
+    <audio src="img/geek6.mp3" id="geek6_audio" preload="auto"></audio>
+
+
+    <!-- JSの記載 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+
+        //GEEKをみつける、ボタンを押したら
+        //オススメGEEKの写真が差し代わるようにしたい！
+
+
+        $("#result__btn").on("click", function () {
+
+            //乱数（1〜7）         
+            const min = 1;
+            const max = 7;
+            const num = Math.floor(Math.random() * (max - min + 1)) + min;
+            console.log(num);
+
+            //if分岐処理
+
+            //viewの中身を変えたい場合は、constではなくlet by山崎先生
+            let view = "";
+
+            if (num === 1) {
+                view = "img/geek1.png";
+
+                //表示処理
+                //attr() 関数の第一引数に属性名（この場合は "src"）を指定し、第二引数に属性値を指定する必要があります。
+                $("#result_img").attr("src", view);
+                $("#result_text").text("★ KING of GEEK ★");
+                $("#result_text").css("color", "blue");
+                $("#result_text").css("font-weight", "bold");
+                $("#geek1_audio").get(0).play();
+
+            } if (num === 2) {
+                view = "img/geek2.png";
+
+                //表示処理
+
+                $("#result_img").attr("src", view);
+                $("#result_text").text("ビジョンやコンセプトづくりならお任せ");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+
+            } if (num === 3) {
+                view = "img/geek3.png";
+
+                //表示処理
+
+                $("#result_img").attr("src", view);
+                $("#result_text").text("焼肉といえば！やすもり3代目");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+                $("#geek3_audio").get(0).play();
+
+            } if (num === 4) {
+                view = "img/geek4.png";
+
+                //表示処理
+
+                $("#result_img").attr("src", view);
+                $("#result_text").text("職人技ひかるGEEK");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+
+            } if (num === 5) {
+                view = "img/geek5.png";
+
+                //表示処理
+
+                $("#result_img").attr("src", view);
+                $("#result_text").text("ワインとジンとプログラミングに乾杯〜");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+                $("#geek5_audio").get(0).play();
+
+
+            } if (num === 6) {
+                view = "img/geek6.png";
+
+                //表示処理
+
+                $("#result_img").attr("src", view);
+                $("#result_text").text("福岡を明るくするぞ！バカチンガー！！");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+                $("#geek6_audio").get(0).play();
+
+            } if (num === 7) {
+                view = "img/geek7.png";
+
+                //表示処理
+                //attr() 関数の第一引数に属性名（この場合は "src"）を指定し、第二引数に属性値を指定する必要があります。
+                $("#result_img").attr("src", view);
+                $("#result_text").text("よっ！名幹事");
+                $("#result_text").css("color", "black");
+                $("#result_text").css("font-weight", "bold");
+            }
+
+
+
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

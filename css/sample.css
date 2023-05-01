@@ -1,0 +1,92 @@
+/*初期設定
+---------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/*header
+---------------------*/
+.header__wrapper {
+    text-align: center;
+}
+
+.logo__img {
+    width: 120px;
+    padding: 15px 0;
+}
+
+h1 {
+    font-size: 56px;
+    margin: 0;
+}
+
+.header__text {
+    font-size: 32px;
+    margin: 0 0 40px;
+}
+
+.header__img {
+    margin: 0 0 20px;
+}
+
+.nav__wrapper {
+    max-width: 960px;
+    margin: auto;
+}
+
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    height: 80px;
+
+}
+
+.nav-item>a {
+    color: #222222;
+}
+
+/*main
+---------------------*/
+
+.result__wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 80px;
+}
+
+.result_text {
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
+
+.result_img {
+    width: 600px;
+    margin: 0 0 20px;
+}
+
+.result__btn {
+    display: block;
+    margin: auto;
+    width: 250px;
+    padding: 11px 0;
+    background-color: #00bfff;
+    color: azure;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/*footer
+---------------------*/
+
+.footer {
+    background-color: black;
+    padding: 30px 0;
+    color: azure;
+    font-size: 18px;
+    text-align: center;
+}
